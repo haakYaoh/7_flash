@@ -1,0 +1,8 @@
+D:/EDA_Project/FPGA_Games/FPGA_project/6_RTC/testcode/tb/tb_rtc.v {1 {vlog -work work -vopt -stats=none D:/EDA_Project/FPGA_Games/FPGA_project/6_RTC/testcode/tb/tb_rtc.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module tb_rtc
+
+Top level modules:
+	tb_rtc
+
+} {} {}}

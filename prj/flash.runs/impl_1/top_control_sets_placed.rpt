@@ -1,0 +1,629 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Mon Jun 29 22:00:20 2026
+| Host         : DESKTOP-424B21A running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7s6
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   551 |
+|    Minimum number of control sets                        |   551 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   114 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   551 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |   534 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |              86 |           33 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            4576 |         1341 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+-------------------------------------------------+------------------+------------------+----------------+--------------+
+|    Clock Signal    |                  Enable Signal                  | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+-------------------------------------------------+------------------+------------------+----------------+--------------+
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/state_reg[3]_0[0]       | rst_IBUF         |                2 |              4 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/state_reg[0][0]         | rst_IBUF         |                2 |              4 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/edge_cnt[4]_i_1_n_0     | rst_IBUF         |                3 |              6 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/state_reg[5][0]                  | rst_IBUF         |                3 |              6 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/uart_rx_done_reg_1[0]                 | rst_IBUF         |                1 |              6 |         6.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_33[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_15[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_16[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/spi_data_in[7]_i_1_n_0           | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_12[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/STOP_IDLE                             | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_10[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_17[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_18[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/miso_shift[7]_i_1_n_0   | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_ack                | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_37[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_11[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_0[0]  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_10[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_31[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_35[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_36[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_4[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1][0]    | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0][0]    | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_22[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_12[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_34[0] | rst_IBUF         |                6 |              8 |         1.33 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_18[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_11[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_17[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_29[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_5[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_0[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_23[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_25[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_13[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_14[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_20[0] | rst_IBUF         |                5 |              8 |         1.60 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_1[0]  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_26[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_3[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_28[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_33[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_37[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_38[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_19[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_21[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_30[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_6[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_7[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_8[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_16[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_9[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_2[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_0[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_27[0] | rst_IBUF         |                5 |              8 |         1.60 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_32[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_15[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[0]_24[0] | rst_IBUF         |                5 |              8 |         1.60 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_16[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_18[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_24[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_20[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_10[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_26[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_30[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_31[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_32[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_8[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_17[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_28[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_25[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_10[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_36[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_16[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_17[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_19[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_2[0]  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_21[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_1[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_27[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_27[0] | rst_IBUF         |                6 |              8 |         1.33 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_20[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_15[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_30[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_18[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_22[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_0[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_12[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_3[0]  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_31[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_15[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_23[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_24[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_11[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_1[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_13[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_34[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_7[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_26[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_17[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_2[0]  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_35[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_9[0]  | rst_IBUF         |                6 |              8 |         1.33 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_14[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_4[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2][0]    | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_23[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_37[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_22[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_25[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_6[0]  | rst_IBUF         |                8 |              8 |         1.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_3[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_28[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_29[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_12[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_19[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_29[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_11[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_21[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_13[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_14[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[1]_5[0]  | rst_IBUF         |                5 |              8 |         1.60 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_32[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_33[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_34[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_9[0]  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_2[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_20[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_5[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_29[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_18[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_1[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_32[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_11[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_20[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_12[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_4[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_14[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_19[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_21[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_25[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_24[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_30[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_8[0]  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_22[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_0[0]  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_13[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_27[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_31[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_22[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_8[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_6[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_2[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_3[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_4[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_6[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5][0]    | rst_IBUF         |                5 |              8 |         1.60 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_26[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_1[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_0[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_10[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_25[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_23[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_26[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_29[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_27[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_11[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_32[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_12[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_5[0]  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_30[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_16[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_7[0]  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_10[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_15[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_9[0]  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_19[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_23[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_28[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_31[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_21[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_4[0]  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4][0]    | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_24[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_28[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_7[0]  | rst_IBUF         |                7 |              8 |         1.14 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[4]_3[0]  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_7[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_18[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_2[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_5[0]  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_5[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_6[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_9[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_7[0]  | rst_IBUF         |                7 |              8 |         1.14 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_21[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_19[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_3[0]  | rst_IBUF         |                5 |              8 |         1.60 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_13[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6][0]    | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_10[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_20[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_21[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_8[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_6[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_20[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_16[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_17[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_18[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_17[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_15[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_15[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_9[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_7[0]  | rst_IBUF         |                6 |              8 |         1.33 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_4[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_16[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_4[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_17[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_13[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_14[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_3[0]  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_20[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_4[0]  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_1[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_8[0]  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_0[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_2[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_11[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_14[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_1[0]  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_3[0]  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_11[0] | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_19[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_6[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_9[0]  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_2[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_13[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_14[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_0[0]  | rst_IBUF         |                6 |              8 |         1.33 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7][0]    | rst_IBUF         |                7 |              8 |         1.14 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_10[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_15[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_18[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[7]_12[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_16[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_21[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_5[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_22[0] | rst_IBUF         |                5 |              8 |         1.60 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[5]_8[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_19[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[6]_12[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/state_reg[4][0]         | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_6[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/state_reg[1][0]         | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | uart_tx_en_reg_n_0                              | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_34[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_35[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_39[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_4[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_31[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_38[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_40[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_18[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_19[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_26[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_15[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_28[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_29[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_3[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_25[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_30[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_11[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_24[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_32[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_1[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_33[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_36[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_37[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_16[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_0[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_12[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_14[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_17[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_13[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_10[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_2[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0][0]                    | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_20[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_21[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_22[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_23[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_27[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_4[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_3[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_17[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_6[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_7[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_24[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_2[0]                  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_27[0]                 | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_7[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_8[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_30[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_10[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_8[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_25[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_4[0]                  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_18[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_18[0]                 | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_27[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_5[0]                  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_7[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_15[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_12[0]                 | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_2[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_25[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_21[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_14[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_26[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_1[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_10[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_13[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_0[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_24[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_29[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_5[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2][0]                    | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_11[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_23[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_6[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_16[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_23[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_16[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_5[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_22[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_6[0]                  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_14[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_11[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[0]_9[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_17[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_20[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_19[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_1[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_19[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_9[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_13[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_20[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_22[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_26[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_28[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_0[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1][0]                    | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_12[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_21[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[1]_15[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_3[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_19[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_20[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_11[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_0[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_3[0]                  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_17[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_25[0]                 | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_12[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_14[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_26[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_15[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_8[0]                  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_1[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_2[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_1[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_6[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_8[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_4[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_13[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3][0]                    | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4][0]                    | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_5[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_15[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_8[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5][0]                    | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_27[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_20[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_5[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_14[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_13[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_15[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_24[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_12[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_18[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_10[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_11[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_10[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_10[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_11[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_21[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_3[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_12[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_19[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_2[0]                  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_21[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_4[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_6[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_16[0]                 | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_18[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_9[0]                  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_22[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_17[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_14[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_7[0]                  | rst_IBUF         |                5 |              8 |         1.60 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_13[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[2]_9[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_16[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_7[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_0[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_23[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_1[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[4]_0[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_28[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[3]_9[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_38[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_29[0]                 | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_41[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_20[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_27[0]                 | rst_IBUF         |                5 |              8 |         1.60 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_17[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_6[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_1[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_21[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_23[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_5[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_9[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_15[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_22[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_28[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_3[0]                  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_22[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_23[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_40[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_13[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_37[0]                 | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_20[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_16[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_0[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_31[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_11[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_36[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_6[0]                  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_33[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6][0]                    | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_34[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_0[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_19[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_42[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_43[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_1[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_10[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_12[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_14[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_19[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_26[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_5[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_7[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_21[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_7[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_2[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_30[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_39[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_4[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_4[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_8[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_24[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_3[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_9[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_32[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7][0]                    | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_16[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_18[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_8[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[5]_2[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_17[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_35[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_18[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[6]_25[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_12[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_5[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_8[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_2[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_15[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_22[0]                 | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_20[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_4[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_6[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_10[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_7[0]                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/line_len_reg[4][0]                    | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_13[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/line_len_reg[0][0]                    | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_17[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_18[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/line_len_reg[0]_0[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_11[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_9[0]                  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_19[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/line_len_reg[1][0]                    | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_3[0]                  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_14[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_16[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_21[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/data_len_reg[7]_23[0]                 | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/uart_rx_done_reg_3[0]                 | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/state_reg[5]_0[0]                     | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/state_reg[3]_0[0]                     | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/state_reg[3][0]                       | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/state_reg[4][0]                       | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/state_reg[3]_1[0]                     | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_tx/E[0]                                  | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_36[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_7[0]  | rst_IBUF         |                5 |              8 |         1.60 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_8[0]  | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_35[0] | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_1[0]  | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_13[0] | rst_IBUF         |                2 |              8 |         4.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3][0]    | rst_IBUF         |                3 |              8 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_9[0]  | rst_IBUF         |                4 |              8 |         2.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[2]_5[0]  | rst_IBUF         |                6 |              8 |         1.33 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[3]_14[0] | rst_IBUF         |                1 |              8 |         8.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/read_len                         | rst_IBUF         |                3 |              9 |         3.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/baud_cnt[8]_i_1_n_0                   | rst_IBUF         |                3 |              9 |         3.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/mosi_shift[7]_i_1_n_0   | rst_IBUF         |                2 |              9 |         4.50 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/E[0]                    | rst_IBUF         |                3 |              9 |         3.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/read_index_reg[8][0]    | rst_IBUF         |                4 |              9 |         2.25 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/E[0]                                  | rst_IBUF         |                2 |              9 |         4.50 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/state_reg[0][0]                       | rst_IBUF         |                3 |              9 |         3.00 |
+|  sys_clk_IBUF_BUFG | u_uart_tx/uart_tx_busy                          | rst_IBUF         |                3 |              9 |         3.00 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/state_reg[5][0]                       | rst_IBUF         |                3 |              9 |         3.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/byte_cnt_reg[7][0]      | rst_IBUF         |                6 |             10 |         1.67 |
+|  sys_clk_IBUF_BUFG | erase_sector_req_i_1_n_0                        | rst_IBUF         |                5 |             12 |         2.40 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/tx_index[8]_i_3_0[0]             | rst_IBUF         |                9 |             15 |         1.67 |
+|  sys_clk_IBUF_BUFG | u_uart_tx/tx_active_reg                         | rst_IBUF         |               11 |             23 |         2.09 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/done_op_reg[0]_0[0]              | rst_IBUF         |                8 |             24 |         3.00 |
+|  sys_clk_IBUF_BUFG | u_flash_driver/u_spi_ip/state_reg[0]_0[0]       | rst_IBUF         |                7 |             24 |         3.43 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/input_error_reg[0]                    | rst_IBUF         |                9 |             24 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_uart_rx/uart_rx_done_reg_2[0]                 | rst_IBUF         |                9 |             27 |         3.00 |
+|  sys_clk_IBUF_BUFG | chunk_len[8]_i_1_n_0                            | rst_IBUF         |               11 |             33 |         3.00 |
+|  sys_clk_IBUF_BUFG | read_req_i_1_n_0                                | rst_IBUF         |               10 |             33 |         3.30 |
+|  sys_clk_IBUF_BUFG | u_seg/bits[3]_i_1_n_0                           | rst_IBUF         |               10 |             44 |         4.40 |
+|  sys_clk_IBUF_BUFG |                                                 | rst_IBUF         |               33 |             86 |         2.61 |
++--------------------+-------------------------------------------------+------------------+------------------+----------------+--------------+
+
+

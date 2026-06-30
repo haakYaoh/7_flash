@@ -1,0 +1,508 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7s6ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s6'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s6'
+INFO: [Device 21-403] Loading part xc7s6ftgb196-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 400
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1021.914 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/rtl/top.v:1]
+	Parameter MSG_PROMPT bound to: 4'b0000 
+	Parameter MSG_WADDR bound to: 4'b0001 
+	Parameter MSG_DATA bound to: 4'b0010 
+	Parameter MSG_RADDR bound to: 4'b0011 
+	Parameter MSG_DADDR bound to: 4'b0100 
+	Parameter MSG_ID_PREFIX bound to: 4'b0101 
+	Parameter MSG_READ_HEAD bound to: 4'b0110 
+	Parameter MSG_WRITE_OK bound to: 4'b0111 
+	Parameter MSG_DEL_OK bound to: 4'b1000 
+	Parameter MSG_ERR bound to: 4'b1001 
+	Parameter MSG_CRLF bound to: 4'b1010 
+	Parameter MSG_PROMPT_LEN bound to: 9'b000101101 
+	Parameter MSG_WADDR_LEN bound to: 9'b000101010 
+	Parameter MSG_DATA_LEN bound to: 9'b000011010 
+	Parameter MSG_RADDR_LEN bound to: 9'b000101001 
+	Parameter MSG_DADDR_LEN bound to: 9'b000101010 
+	Parameter MSG_ID_PREFIX_LEN bound to: 9'b000001100 
+	Parameter MSG_READ_HEAD_LEN bound to: 9'b000001110 
+	Parameter MSG_WRITE_OK_LEN bound to: 9'b000011100 
+	Parameter MSG_DEL_OK_LEN bound to: 9'b000010110 
+	Parameter MSG_ERR_LEN bound to: 9'b000100100 
+	Parameter MSG_CRLF_LEN bound to: 9'b000000010 
+	Parameter STR_PROMPT bound to: 
+Please enter operation: write/read/ID/del
+ - type: string 
+	Parameter STR_WADDR bound to: 
+Which address to write? 000000-FFFFFF:
+ - type: string 
+	Parameter STR_DATA bound to: 
+Please enter the data:
+ - type: string 
+	Parameter STR_RADDR bound to: 
+Which address to read? 000000-FFFFFF:
+ - type: string 
+	Parameter STR_DADDR bound to: 
+Which sector to delete? 000000-FFFFFF:
+ - type: string 
+	Parameter STR_ID_PREFIX bound to: 
+Flash ID:  - type: string 
+	Parameter STR_READ_HEAD bound to: 
+Read data:
+ - type: string 
+	Parameter STR_WRITE_OK bound to: 
+Data storage successful!
+ - type: string 
+	Parameter STR_DEL_OK bound to: 
+Delete successful!
+ - type: string 
+	Parameter STR_ERR bound to: 
+Invalid input, please try again.
+ - type: string 
+	Parameter STR_CRLF bound to: 
+ - type: string 
+	Parameter TX_MSG bound to: 2'b00 
+	Parameter TX_ID_VALUE bound to: 2'b01 
+	Parameter TX_READ_DATA bound to: 2'b10 
+	Parameter S_BOOT bound to: 6'b000000 
+	Parameter S_WAIT_PROMPT bound to: 6'b000001 
+	Parameter S_WAIT_CMD bound to: 6'b000010 
+	Parameter S_WAIT_WADDR_MSG bound to: 6'b000011 
+	Parameter S_RECV_WADDR bound to: 6'b000100 
+	Parameter S_WAIT_DATA_MSG bound to: 6'b000101 
+	Parameter S_RECV_DATA bound to: 6'b000110 
+	Parameter S_ERASE1_START bound to: 6'b000111 
+	Parameter S_ERASE1_WAIT bound to: 6'b001000 
+	Parameter S_ERASE2_START bound to: 6'b001001 
+	Parameter S_ERASE2_WAIT bound to: 6'b001010 
+	Parameter S_WRITE_START bound to: 6'b001011 
+	Parameter S_WRITE_WAIT bound to: 6'b001100 
+	Parameter S_WAIT_WRITE_OK bound to: 6'b001101 
+	Parameter S_WAIT_RADDR_MSG bound to: 6'b001110 
+	Parameter S_RECV_RADDR bound to: 6'b001111 
+	Parameter S_READ_LEN_START bound to: 6'b010000 
+	Parameter S_READ_LEN_WAIT bound to: 6'b010001 
+	Parameter S_READ_START bound to: 6'b010010 
+	Parameter S_READ_WAIT bound to: 6'b010011 
+	Parameter S_WAIT_READ_HEAD bound to: 6'b010100 
+	Parameter S_WAIT_READ_DATA bound to: 6'b010101 
+	Parameter S_WAIT_READ_CRLF bound to: 6'b010110 
+	Parameter S_ID_START bound to: 6'b010111 
+	Parameter S_ID_WAIT bound to: 6'b011000 
+	Parameter S_WAIT_ID_PREFIX bound to: 6'b011001 
+	Parameter S_WAIT_ID_VALUE bound to: 6'b011010 
+	Parameter S_WAIT_DADDR_MSG bound to: 6'b011011 
+	Parameter S_RECV_DADDR bound to: 6'b011100 
+	Parameter S_DEL_START bound to: 6'b011101 
+	Parameter S_DEL_WAIT bound to: 6'b011110 
+	Parameter S_WAIT_DEL_OK bound to: 6'b011111 
+	Parameter S_WAIT_ERR bound to: 6'b100000 
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/rtl/uart_rx.v:13]
+	Parameter CLOCK_FREQ bound to: 50000000 - type: integer 
+	Parameter UART_BPS bound to: 115200 - type: integer 
+	Parameter MAX_1BIT bound to: 434 - type: integer 
+	Parameter CHECK_BIT bound to: None - type: string 
+	Parameter IDLE bound to: 5'b00001 
+	Parameter START bound to: 5'b00010 
+	Parameter DATA bound to: 5'b00100 
+	Parameter CHECK bound to: 5'b01000 
+	Parameter STOP bound to: 5'b10000 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (1#1) [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/rtl/uart_rx.v:13]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/rtl/uart_tx.v:10]
+	Parameter CLOCK_FREQ bound to: 50000000 - type: integer 
+	Parameter UART_BPS bound to: 115200 - type: integer 
+	Parameter MAX_1BIT bound to: 434 - type: integer 
+	Parameter CHECK_BIT bound to: None - type: string 
+	Parameter IDLE bound to: 5'b00001 
+	Parameter START bound to: 5'b00010 
+	Parameter DATA bound to: 5'b00100 
+	Parameter CHECK bound to: 5'b01000 
+	Parameter STOP bound to: 5'b10000 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (2#1) [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/rtl/uart_tx.v:10]
+INFO: [Synth 8-6157] synthesizing module 'seg' [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/rtl/seg.v:5]
+	Parameter MAX_count bound to: 16'b1100001101010000 
+	Parameter DIGIT0 bound to: 8'b11000000 
+	Parameter DIGIT1 bound to: 8'b11111001 
+	Parameter DIGIT2 bound to: 8'b10100100 
+	Parameter DIGIT3 bound to: 8'b10110000 
+	Parameter DIGIT4 bound to: 8'b10011001 
+	Parameter DIGIT5 bound to: 8'b10010010 
+	Parameter DIGIT6 bound to: 8'b10000010 
+	Parameter DIGIT7 bound to: 8'b11111000 
+	Parameter DIGIT8 bound to: 8'b10000000 
+	Parameter DIGIT9 bound to: 8'b10010000 
+	Parameter DIGIT10 bound to: 8'b10001000 
+	Parameter DIGIT11 bound to: 8'b10000011 
+	Parameter DIGIT12 bound to: 8'b11000110 
+	Parameter DIGIT13 bound to: 8'b10100001 
+	Parameter DIGIT14 bound to: 8'b10000110 
+	Parameter DIGIT15 bound to: 8'b10001110 
+	Parameter DIGIT16 bound to: 8'b10001001 
+	Parameter DIGIT17 bound to: 8'b11000001 
+	Parameter DIGIT18 bound to: 8'b11111111 
+	Parameter DIGIT19 bound to: 8'b11001000 
+	Parameter DIGIT20 bound to: 8'b10111111 
+INFO: [Synth 8-6155] done synthesizing module 'seg' (3#1) [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/rtl/seg.v:5]
+INFO: [Synth 8-6157] synthesizing module 'flash_driver' [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/rtl/flash_driver.v:1]
+	Parameter CMD_WRITE_ENABLE bound to: 8'b00000110 
+	Parameter CMD_READ_ID bound to: 8'b10011111 
+	Parameter CMD_READ_STATUS bound to: 8'b00000101 
+	Parameter CMD_READ_DATA bound to: 8'b00000011 
+	Parameter CMD_PAGE_PROGRAM bound to: 8'b00000010 
+	Parameter CMD_SECTOR_ERASE bound to: 8'b00100000 
+	Parameter CMD_BULK_ERASE bound to: 8'b11000111 
+	Parameter ST_IDLE bound to: 5'b00000 
+	Parameter ST_WRITE_ENABLE bound to: 5'b00001 
+	Parameter ST_GAP bound to: 5'b00010 
+	Parameter ST_READ_ID bound to: 5'b00011 
+	Parameter ST_READ_DATA bound to: 5'b00100 
+	Parameter ST_PAGE_PROGRAM bound to: 5'b00101 
+	Parameter ST_SECTOR_ERASE bound to: 5'b00110 
+	Parameter ST_BULK_ERASE bound to: 5'b00111 
+	Parameter ST_READ_STATUS bound to: 5'b01000 
+	Parameter ST_END bound to: 5'b01001 
+	Parameter OP_NONE bound to: 4'b0000 
+	Parameter OP_WRITE_ENABLE bound to: 4'b0001 
+	Parameter OP_READ_ID bound to: 4'b0010 
+	Parameter OP_READ_DATA bound to: 4'b0011 
+	Parameter OP_PAGE_PROGRAM bound to: 4'b0100 
+	Parameter OP_SECTOR_ERASE bound to: 4'b0101 
+	Parameter OP_BULK_ERASE bound to: 4'b0110 
+	Parameter SPI_CLK_DIV bound to: 16'b0000000000010100 
+	Parameter CS_GAP_CYCLES bound to: 8'b00001010 
+INFO: [Synth 8-6157] synthesizing module 'spi_ip' [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/rtl/spi_ip.v:25]
+	Parameter CPOL bound to: 1'b0 
+	Parameter CPHA bound to: 1'b0 
+	Parameter CLK_DIV bound to: 16'b0000000000010100 
+	Parameter S_IDLE bound to: 3'b000 
+	Parameter S_CLK_HALF bound to: 3'b001 
+	Parameter S_CLK_EDGE bound to: 3'b010 
+	Parameter S_LAST_HALF bound to: 3'b011 
+	Parameter S_ACK bound to: 3'b100 
+	Parameter S_ACK_WAIT bound to: 3'b101 
+INFO: [Synth 8-6155] done synthesizing module 'spi_ip' (4#1) [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/rtl/spi_ip.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'flash_driver' (5#1) [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/rtl/flash_driver.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (6#1) [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/rtl/top.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1218.496 ; gain = 196.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1218.496 ; gain = 196.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1218.496 ; gain = 196.582
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 1218.496 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/prj/flash.srcs/constrs_1/new/PIN.xdc]
+Finished Parsing XDC File [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/prj/flash.srcs/constrs_1/new/PIN.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/prj/flash.srcs/constrs_1/new/PIN.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1292.188 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1292.188 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s6ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'cstate_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'cstate_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_ip'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                            00001 |                            00001
+                   START |                            00010 |                            00010
+                    DATA |                            00100 |                            00100
+                    STOP |                            10000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'cstate_reg' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                            00001 |                            00001
+                   START |                            00010 |                            00010
+                    DATA |                            00100 |                            00100
+                    STOP |                            10000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'cstate_reg' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                              000 |                              000
+              S_CLK_HALF |                              101 |                              001
+              S_CLK_EDGE |                              100 |                              010
+             S_LAST_HALF |                              011 |                              011
+                   S_ACK |                              010 |                              100
+              S_ACK_WAIT |                              001 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'spi_ip'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 10    
+	   2 Input   24 Bit       Adders := 3     
+	   2 Input   20 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 10    
+	   3 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 4     
+	   2 Input    7 Bit       Adders := 6     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 3     
++---XORs : 
+	                8 Bit    Wide XORs := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               24 Bit    Registers := 7     
+	               20 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 9     
+	                8 Bit    Registers := 530   
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   2 Input   24 Bit        Muxes := 1     
+	  11 Input   24 Bit        Muxes := 1     
+	   3 Input   24 Bit        Muxes := 1     
+	  34 Input   24 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 2     
+	  11 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 25    
+	  34 Input    9 Bit        Muxes := 2     
+	  11 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 10    
+	  11 Input    8 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 3     
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 7     
+	   2 Input    6 Bit        Muxes := 7     
+	   4 Input    6 Bit        Muxes := 1     
+	   5 Input    6 Bit        Muxes := 1     
+	  34 Input    6 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 11    
+	  11 Input    5 Bit        Muxes := 2     
+	   6 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 8     
+	  11 Input    4 Bit        Muxes := 3     
+	  34 Input    4 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 9     
+	   6 Input    3 Bit        Muxes := 2     
+	  11 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 3     
+	  34 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 2     
+	  34 Input    2 Bit        Muxes := 5     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 850   
+	   6 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 5     
+	   5 Input    1 Bit        Muxes := 1     
+	  11 Input    1 Bit        Muxes := 8     
+	  34 Input    1 Bit        Muxes := 276   
+	   8 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 10 (col length:20)
+BRAMs: 10 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|seg         | seg        | 32x8          | LUT            | 
+|seg         | seg        | 32x8          | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    49|
+|3     |LUT1   |     6|
+|4     |LUT2   |   264|
+|5     |LUT3   |   188|
+|6     |LUT4   |   195|
+|7     |LUT5   |   334|
+|8     |LUT6   |  2038|
+|9     |MUXF7  |   297|
+|10    |MUXF8  |   142|
+|11    |FDCE   |  4624|
+|12    |FDPE   |    37|
+|13    |IBUF   |     4|
+|14    |OBUF   |    20|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 1292.188 ; gain = 270.273
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:48 . Memory (MB): peak = 1292.188 ; gain = 196.582
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 1292.188 ; gain = 270.273
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1292.188 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 488 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1292.188 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 1292.188 ; gain = 270.273
+INFO: [Common 17-1381] The checkpoint 'D:/EDA_Project/FPGA_Games/FPGA_project/7_flash/prj/flash.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 29 21:59:43 2026...
